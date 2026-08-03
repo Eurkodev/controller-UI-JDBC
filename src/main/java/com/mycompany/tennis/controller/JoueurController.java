@@ -33,12 +33,12 @@ public class JoueurController {
         joueur.setPrenom(prenomJoueur);
 
         System.out.println("Quel est le sexe du joueur ?");
-        Character sexeJoueur = sc.nextLine().charAt(0);
+        char sexeJoueur = sc.nextLine().charAt(0);
         joueur.setSexe(sexeJoueur);
 
         joueurService.createJoueur(joueur);
 
-        System.out.println("Le joueur créé est " + joueur.getNom() + " " + joueur.getPrenom());
+        System.out.println("Le joueur créé est " + joueur.getNom() + " " + joueur.getPrenom() + " son identifiant est " + joueur.getId());
 
-    }
+    } 
 }

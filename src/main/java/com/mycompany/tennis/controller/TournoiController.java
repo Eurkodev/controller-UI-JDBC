@@ -14,7 +14,7 @@ public class TournoiController {
         tournoiService = new TournoiService();
     }
 
-    public void afficheDetailsJoueur() {
+    public void afficheDetailsTournoi() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Quel est le tournoi dont vous voulez afficher les informations ?");
         long identifiant = sc.nextLong();
