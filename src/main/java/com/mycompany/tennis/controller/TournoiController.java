@@ -38,6 +38,12 @@ public class TournoiController {
 
     }
 
-
+    public void supprimeTournoi() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quel est le tournoi a supprimer ?");
+        long identifiant = sc.nextLong();
+        sc.nextLine();
+        tournoiService.deleteTournoi(identifiant);
+    }
 
 }

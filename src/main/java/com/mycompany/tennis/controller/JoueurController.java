@@ -62,6 +62,14 @@ public void changementSexe() {
         joueurService.changementSexe(nouveauSexe, 53L);
 }
 
+public void supprimeJoueur() {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Quel est l'identifiant du joueur à supprimer ?");
+    long identifiant = sc.nextLong();
+    sc.nextLine();
+    joueurService.deleteJoueur(identifiant);
+}
+
 
 
 
