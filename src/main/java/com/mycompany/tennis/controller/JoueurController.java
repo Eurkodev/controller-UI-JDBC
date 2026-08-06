@@ -3,6 +3,7 @@ package com.mycompany.tennis.controller;
 import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.service.JoueurService;
 
+import javax.security.auth.callback.CallbackHandler;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -51,5 +52,17 @@ public class JoueurController {
         String nouveauNom = sc.nextLine();
         joueurService.renomme(identifiant, nouveauNom);
     }
+public void changementSexe() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant du joueur ?");
+        Long id = sc.nextLong();
+        sc.nextLine();
+        System.out.println("Quel est le nouveau sexe ?");
+        Character nouveauSexe = (Character) sc.nextLine().charAt(0);
+        joueurService.changementSexe(nouveauSexe, 53L);
+}
+
+
+
 
 }
