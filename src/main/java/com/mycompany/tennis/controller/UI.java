@@ -8,10 +8,10 @@ public class UI {
 
        //joueurController.afficheDetailsJoueur();
 
-        TournoiController controller = new TournoiController();
-        controller.supprimeTournoi();
+        //TournoiController controller = new TournoiController();
+        //controller.afficheDetailsTournoi();
 
-
-
+        ScoreController scoreController = new ScoreController();
+        scoreController.afficheDetailsScore();
     }
 }
