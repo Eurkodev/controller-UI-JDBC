@@ -12,6 +12,6 @@ public class UI {
         //controller.afficheDetailsTournoi();
 
         EpreuveController epreuveController = new EpreuveController();
-        epreuveController.afficheDetailsEpreuve();
+        epreuveController.afficheDerniereEpreuve();
     }
 }
