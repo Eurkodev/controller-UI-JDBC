@@ -1,5 +1,7 @@
 package com.mycompany.tennis.controller;
 
+import com.mycompany.tennis.core.entity.Score;
+
 public class UI {
     public static void main(String[] args) {
         //JoueurController joueurController = new JoueurController();
@@ -14,7 +16,10 @@ public class UI {
        // EpreuveController epreuveController = new EpreuveController();
         // epreuveController.afficheRolandGarros();
 
-        MatchController matchController = new MatchController();
-        matchController.afficheDetailsMatch();
+        //MatchController matchController = new MatchController();
+        //matchController.afficheDetailsMatch();
+
+        ScoreController scoreController = new ScoreController();
+        scoreController.afficheDetailsScore();
     }
 }

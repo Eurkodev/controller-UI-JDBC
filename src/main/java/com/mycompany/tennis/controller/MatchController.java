@@ -18,7 +18,8 @@ public class MatchController {
         Scanner sc = new Scanner(System.in);
         System.out.println("Quel est le match dont vous voulez afficher les informations ?");
         long identifiant = sc.nextLong();
-        MatchDto epreuve = matchService.getMatch(identifiant);
+        MatchDto matchDto = matchService.getMatch(identifiant);
+        System.out.println("Il s'agit d'un match de " + matchDto.getEpreuve().getAnnee() + " qui s'est déroulé à " + matchDto.getEpreuve().getTournoi().getNom());
 
     }
 
