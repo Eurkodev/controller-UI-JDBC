@@ -19,7 +19,11 @@ public class UI {
         //MatchController matchController = new MatchController();
         //matchController.afficheDetailsMatch();
 
-        EpreuveController epreuveController = new EpreuveController();
-        epreuveController.afficheDetailsEpreuve();
+
+       // matchController.afficheDetailsMatch();
+       // matchController.ajouterMatch();
+
+        ScoreController scoreController = new ScoreController();
+        scoreController.supprimeMatch();
     }
 }

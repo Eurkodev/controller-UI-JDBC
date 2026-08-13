@@ -2,11 +2,18 @@ package com.mycompany.tennis.controller;
 
 import com.mycompany.tennis.core.dto.ScoreFullDto;
 import com.mycompany.tennis.core.entity.Score;
+import com.mycompany.tennis.core.service.MatchService;
 import com.mycompany.tennis.core.service.ScoreService;
 
 import java.util.Scanner;
 
 public class ScoreController {
+    private ScoreService scoreService;
+
+    public ScoreController() {
+        scoreService = new ScoreService();
+    }
+
     public void afficheDetailsScore() {
         ScoreService scoreService = new ScoreService();
         Scanner sc = new Scanner(System.in);
@@ -25,7 +32,13 @@ public class ScoreController {
         if (scoreDto.getSet5()!=null) System.out.println("Le score du set 5 est : " + scoreDto.getSet5());
         else System.out.println("Pas de score pour le set 5");
         }
-
+    public void supprimeMatch() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quel est l'identifiant du score à supprimer ? ");
+        long identifiant = sc.nextLong();
+        sc.nextLine();
+        scoreService.deleteScore(identifiant);
+    }
 
     }
 
