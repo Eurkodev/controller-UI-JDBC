@@ -2,6 +2,7 @@ package com.mycompany.tennis.controller;
 
 import com.mycompany.tennis.core.dto.EpreuveFullDto;
 import com.mycompany.tennis.core.dto.EpreuveLightDto;
+import com.mycompany.tennis.core.dto.JoueurDto;
 import com.mycompany.tennis.core.entity.Epreuve;
 import com.mycompany.tennis.core.entity.Tournoi;
 import com.mycompany.tennis.core.service.EpreuveService;
@@ -18,13 +19,15 @@ public class EpreuveController {
         epreuveService = new EpreuveService();
     }
 
-    public void afficheDerniereEpreuve() {
+    public void afficheDetailsEpreuve() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Quel est l'épreuve dont vous voulez afficher les informations ?");
         long identifiant = sc.nextLong();
-        EpreuveFullDto epreuve = epreuveService.getEpreuveAvecTournoi(identifiant);
+        EpreuveFullDto epreuve = epreuveService.getEpreuveDetaillee(identifiant);
         System.out.println("Le nom du tournoi est : " + epreuve.getTournoi().getNom());
-
+        for (JoueurDto joueurdto : epreuve.getParticipants()) {
+            System.out.println(joueurdto.getNom() + " " + joueurdto.getPrenom());
+        }
     }
 
     public void afficheRolandGarros() {
