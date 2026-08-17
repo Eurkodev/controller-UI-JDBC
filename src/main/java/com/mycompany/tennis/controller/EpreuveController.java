@@ -37,4 +37,13 @@ public class EpreuveController {
         EpreuveLightDto epreuve = epreuveService.getEpreuveSansTournoi(identifiant);
     }
 
+    public void  afficheListeEpreuve() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Quel est le code du tournoi à afficher?");
+        String codeTournoi = sc.nextLine();
+        for(EpreuveFullDto dto : epreuveService.getListeEpreuves(codeTournoi)) {
+            System.out.println(dto.getId() + " " + dto.getAnnee() + " " + dto.getTypeEpreuve() + " " + dto.getTournoi().getNom());
+        };
+    }
+
 }
